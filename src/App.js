@@ -1,12 +1,15 @@
- 
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Components/Home';
 import './App.css';
 
-function App() {
-  return (
-    <div className="">
-      <h1 className='text-4xl underline font-bold'>Hello world! </h1>
-    </div>
-  );
-}
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  </Router>
+);
 
 export default App;
+
