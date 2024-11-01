@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../Navbar';
+import Navbar from './NavBar';
 import Sidebar from '../Components/SideBar';
-import FundraiserCard from './FundRaiser';
+import FundRasier from '../Components/FundRaiser';
 import Footer from '../Components/Footer';
 
 const Home = () => (
@@ -21,12 +21,7 @@ const Home = () => (
           <button className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">All locations</button>
         </div>
         <div className="grid grid-cols-3 gap-6">
-          <FundraiserCard />
-          <FundraiserCard />
-          <FundraiserCard />
-          <FundraiserCard />
-          <FundraiserCard />
-          <FundraiserCard />
+       
         </div>
       </main>
     </div>
