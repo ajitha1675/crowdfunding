@@ -1,32 +1,37 @@
 import React from 'react';
-import Navbar from '../Navbarcomp/NavBar';
-import Sidebar from '../Components/SideBar';
-import FundRasier from '../Components/FundRaiser';
-import Footer from '../Components/Footer';
+import Navbar from './NavBar';
+import HeroSection from './HeroSection';
+import Sidebar from './SideBar';
+import FundraiserCard from '../components/FundraiserCard';
+import Footer from './Footer';
 
-const Home = () => (
-  <div className="flex flex-col min-h-screen">
-    <Navbar />
-    <div className="flex flex-1">
-      <Sidebar />
-      <main className="flex-1 p-6 bg-gray-100">
-        <div className="bg-cover bg-center h-48 flex items-center justify-center text-white text-3xl font-bold mb-6" style={{ backgroundImage: 'url("https://via.placeholder.com/800x200")' }}>
-          Save a Child Every Month
-          <button className="ml-4 bg-green-500 text-white px-6 py-2 rounded-md">Start Giving Monthly</button>
+function HomePage() {
+  const fundraisers = [
+    { title: "Title 1", fundraiserName: "Fundraiser 1", days: 10, supporters: 20, imageUrl: "C:\Users\Amaradeevan\crowdfunding\src\Imagess\child.jpg" },
+    { title: "Title 1", fundraiserName: "Fundraiser 34", days: 10, supporters: 20, imageUrl: "C:\Users\Amaradeevan\crowdfunding\src\Imagess\ch2.jpg" },
+    { title: "Title 1", fundraiserName: "Fundraiser 89", days: 10, supporters: 20, imageUrl: "C:\Users\Amaradeevan\crowdfunding\src\Imagess\ch3.jpg" },
+    { title: "Title 1", fundraiserName: "Fundraiser 82", days: 10, supporters: 20, imageUrl: "C:\Users\Amaradeevan\crowdfunding\src\Imagess\ch4.jpg" },
+    { title: "Title 1", fundraiserName: "Fundraiser 12", days: 10, supporters: 20, imageUrl: "C:\Users\Amaradeevan\crowdfunding\src\Imagess\ch5.jpg" },
+    { title: "Title 1", fundraiserName: "Fundraiser 17", days: 10, supporters: 20, imageUrl: "C:\Users\Amaradeevan\crowdfunding\src\Imagess\ch6.jpg" },
+    // Add more sample fundraiser data
+  ];
+
+  return (
+    <div className="bg-black text-white">
+      <Navbar />
+      <HeroSection />
+      <div className="container mx-auto p-8 flex">
+        <Sidebar />
+        <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ml-4">
+          {fundraisers.map((fundraiser, index) => (
+            <FundraiserCard key={index} {...fundraiser} />
+          ))}
         </div>
-        <div className="flex space-x-4 mb-6">
-          <input type="text" placeholder="Search for fundraisers" className="px-4 py-2 w-full rounded-md border border-gray-300" />
-          <button className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">All categories</button>
-          <button className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">Trending</button>
-          <button className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">All locations</button>
-        </div>
-        <div className="grid grid-cols-3 gap-6">
-       
-        </div>
-      </main>
+      </div>
+      <Footer />
     </div>
-    <Footer />
-  </div>
-);
+  );
+}
 
-export default Home;
+export default HomePage;
+
