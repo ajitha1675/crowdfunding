@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../Components/NavBar';
+import NavBar from './Navbarcomp/NavBar'; // Assuming this is a different component
 
-const NavBar = () => (
+const NavigationBar = () => (
   <nav className="flex items-center justify-between bg-gray-800 p-4 text-white">
     <div className="text-xl font-bold">Logo</div>
     <div className="flex items-center space-x-4">
@@ -16,4 +16,4 @@ const NavBar = () => (
   </nav>
 );
 
-export default NavBar;
+export default NavigationBar;

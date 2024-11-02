@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './NavBar';
+import Navbar from '../Navbarcomp/NavBar';
 import Sidebar from '../Components/SideBar';
 import FundRasier from '../Components/FundRaiser';
 import Footer from '../Components/Footer';
